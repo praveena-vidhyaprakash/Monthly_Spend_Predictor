@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spend Predictor</title>
+</head>
+<body>
+    <h2>Predict Monthly Spending</h2>
+    <form method="POST">
+        <label>Age: <input type="number" name="age" required></label><br><br>
+        <label>Gender:
+            <select name="gender" required>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+        </label><br><br>
+        <label>Income: <input type="number" name="income" required></label><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Predicted Monthly Spend: ₹{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
